@@ -8,6 +8,7 @@ describe("ucfirst function", () => {
     [caseCounter++, "Pirate", "Pirate"],
     [caseCounter++, "àstringwithnosense", "Àstringwithnosense"],
     [caseCounter++, "ÌSADIFFERENTSTRING", "Ìsadifferentstring"],
+    [caseCounter++, "this has empty spaces", "This has empty spaces"],
     [caseCounter++, "", ""],
     [caseCounter++, "123456", "123456"],
   ])(
@@ -20,4 +21,11 @@ describe("ucfirst function", () => {
       expect(ucfirst(word)).toStrictEqual(expected);
     }
   );
+});
+
+describe("mapping", () => {
+  it("Should capitalize each word", () => {
+    const sentence ="this is a sentence all lowercase i expect it to have each word capitalized";
+    expect(sentence.split(" ").map(ucfirst).join(" ")).toBe("This Is A Sentence All Lowercase I Expect It To Have Each Word Capitalized")
+  })
 });
