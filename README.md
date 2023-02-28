@@ -6,12 +6,14 @@
 **Example:**
 
 ```
+const ucfirst = require("ts-ucfirst");
 ucfirst('hello world'); // 'Hello world'
 ```
 
 **Example to capitalize each word of a sentence:**
 
 ```
+const ucfirst = require("ts-ucfirst");
 const sentence = "sentence to be all capitalized"
 sentence.split(' ').map(ucfirst).join(' '); // 'Sentence To Be All Capitalized'  
 ```
