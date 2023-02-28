@@ -1,3 +1,3 @@
-export const ucfirst = (word: string) => {
+export const ucfirst = (word: string): string => {
   return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 };
